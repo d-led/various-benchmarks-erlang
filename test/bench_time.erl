@@ -1,4 +1,4 @@
--module(bench_1).
+-module(bench_time).
 
 -export([
          bench_nano_time/2
