@@ -1,0 +1,8 @@
+{"1.2.0",
+[{<<"micro_timer">>,{pkg,<<"micro_timer">>,<<"0.1.1">>},0}]}.
+[
+{pkg_hash,[
+ {<<"micro_timer">>, <<"0823171A318C124E5AE55D40AD1C79E165C128730B176C12F59ECF034156CB41">>}]},
+{pkg_hash_ext,[
+ {<<"micro_timer">>, <<"B37D279365FA39B45FCEB5E02BCC1FC3B9D062D5C34E9C7877385C2F59D1CE92">>}]}
+].
