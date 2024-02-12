@@ -7,15 +7,16 @@
 ]).
 
 busy_loop(N) ->
-    busy_loop(N+1).
+    busy_loop(N + 1).
 
 busy_loop() ->
     busy_loop(0).
 
 start() ->
     N = erlang:system_info(schedulers),
-    io:format("starting ~p busy loops~n", [N]),
-    [spawn_link(?MODULE, busy_loop, []) || _ <- lists:seq(1, N)].
+    P = [spawn_link(?MODULE, busy_loop, []) || _ <- lists:seq(1, N)],
+    io:format("started ~p busy loops (~p)~n", [N, P]),
+    P.
 
 receive_tick() ->
     receive

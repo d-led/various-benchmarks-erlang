@@ -11,12 +11,7 @@
 
 send_after_mus_and_receive(Mus) ->
     'Elixir.MicroTimer':send_after(Mus,tick,self()),
-    receive
-        tick ->
-            ok
-        after 200 ->
-            io:format("timeout out~n")
-    end.
+    busy_loader:receive_tick().
 
 bench_microtimer_send_after_1mus(_, _) ->
     send_after_mus_and_receive(1).

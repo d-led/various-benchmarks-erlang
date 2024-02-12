@@ -6,14 +6,6 @@
     bench_busy_microtimer_send_after/2
 ]).
 
-receive_tick() ->
-    receive
-        tick ->
-            ok
-    after 200 ->
-        io:format("timeout out~n")
-    end.
-
 busy_microtimer_send_after(init) ->
     io:format("starting ~s~n", [?MODULE]),
     busy_loader:start();

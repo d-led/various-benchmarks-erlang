@@ -9,12 +9,7 @@
 
 send_after_ms_and_receive(Ms) ->
     erlang:send_after(Ms,self(),tick),
-    receive
-        tick -> 
-            ok
-        after 200 ->
-            io:format("timeout out~n")
-    end.
+    busy_loader:receive_tick().
 
 bench_send_after_1ms(_, _) ->
     send_after_ms_and_receive(1).
