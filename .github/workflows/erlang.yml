@@ -14,11 +14,8 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-    env:
-      DIAGNOSTIC: 1
-
-    # container:
-    #   image: erlang:26
+    # env:
+    #   DIAGNOSTIC: 1
 
     steps:
     - uses: actions/checkout@v3
